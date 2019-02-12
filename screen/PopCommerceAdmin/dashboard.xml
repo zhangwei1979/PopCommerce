@@ -85,6 +85,11 @@ along with this software (see the LICENSE.md file). If not, see
                     <container><link text="Suppliers" url="../Supplier" link-type="anchor"/></container>
                 </container>
                 <container>
+                    <link url="../Lead" link-type="anchor">
+                        <image url="/ssstatic/images/Customer.png" url-type="screen" style="invertible" width="40"/></link>
+                    <container><link text="Leads" url="../Lead" link-type="anchor"/></container>
+                </container>
+                <container>
                     <link url="../Order" link-type="anchor" parameter-map="[orderType:'Purchase']">
                         <image url="/ssstatic/images/Purchasing.png" url-type="screen" style="invertible" width="40"/></link>
                     <container><link text="Purchase Orders" url="../Order" link-type="anchor" parameter-map="[orderType:'Purchase']"/></container>
@@ -151,6 +156,7 @@ along with this software (see the LICENSE.md file). If not, see
                         <image url="/ssstatic/images/Wiki.png" url-type="screen" style="invertible" width="40"/></link>
                     <container><link text="Wiki/Content" url="../Wiki/WikiSpaces" link-type="anchor"/></container>
                     <container><link text="Wiki Blogs" url="../Wiki/WikiBlogs" link-type="anchor"/></container>
+                    <container><link text="Survey" url="../Survey" link-type="anchor"/></container>
                 </container>
             </row-col></container-row>
             <label text="&amp;nbsp;" type="p" encode="false"/>

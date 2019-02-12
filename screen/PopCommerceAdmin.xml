@@ -24,12 +24,15 @@ along with this software (see the LICENSE.md file). If not, see
         <set field="searchPartyDocType" value="MantleParty"/>
 
         <set field="appUserGroupTypeEnumId" value="UgtPopcAdmin"/>
+
+        <service-call name="mantle.party.PartyServices.setup#UserOrganizationInfo" out-map="context"/>
     </always-actions>
 
     <subscreens default-item="dashboard" always-use-full-path="true">
         <subscreens-item name="Search" location="component://SimpleScreens/screen/SimpleScreens/Search.xml" menu-index="2"/>
         <subscreens-item name="QuickLookup" location="component://SimpleScreens/screen/SimpleScreens/QuickLookup.xml" menu-index="2"/>
 
+        <subscreens-item name="Survey" location="component://SimpleScreens/screen/SimpleScreens/Survey.xml" menu-index="18"/>
         <subscreens-item name="Manufacturing" location="component://SimpleScreens/screen/SimpleScreens/Manufacturing.xml" menu-index="19"/>
         <subscreens-item name="ProductStore" location="component://SimpleScreens/screen/SimpleScreens/ProductStore.xml" menu-index="23"/>
         <subscreens-item name="Gateway" location="component://SimpleScreens/screen/SimpleScreens/Gateway.xml" menu-index="24"/>
@@ -39,12 +42,6 @@ along with this software (see the LICENSE.md file). If not, see
         <subscreens-item name="SimpleReport" menu-title="Report Builder" menu-index="31"
                 location="component://SimpleScreens/screen/SimpleScreens/SimpleReport.xml"/>
     </subscreens>
-
-    <pre-actions>
-        <!-- in pre-actions so only runs for screen renders, not for transitions -->
-        <!-- TODO this is good for the MANTLE_ACTIVE_ORG filter, but consider putting in always actions for the MANTLE_USER_ORG filter (somehow) -->
-        <service-call name="mantle.party.PartyServices.setup#UserOrganizationInfo" out-map="context"/>
-    </pre-actions>
 
     <widgets>
         <section name="OrgChooserSection" condition="hideNav != 'true'"><widgets>
